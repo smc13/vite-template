@@ -17,11 +17,12 @@
         <UiButton
           :disabled="state.disabled"
           :label="state.label"
-          @clicked="hstEvent('clicked', $event)" />
+          @click="hstEvent('click', $event)" />
       </template>
 
       <template #controls="{ state }">
         <HstCheckbox v-model="state.disabled" title="Disabled" />
+        <HstText v-model="state.label" title="Label" />
       </template>
     </Variant>
   </Story>
