@@ -1,7 +1,8 @@
 {
-  "name": "lumin-ui",
-  "private": true,
+  "name": "vite-template",
   "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@7.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -18,12 +19,12 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/lumin-ui.umd.js",
-  "module": "./dist/lumin-ui.es.js",
+  "main": "./dist/vite-template.umd.js",
+  "module": "./dist/vite-template.es.js",
   "exports": {
     ".": {
-      "import": "./dist/lumin-ui.es.js",
-      "require": "./dist/lumin-ui.umd.js"
+      "import": "./dist/vite-template.es.js",
+      "require": "./dist/vite-template.umd.js"
     }
   },
   "lint-staged": {
