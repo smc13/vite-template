@@ -1,1 +1,1 @@
-# Hello Lumin-UI
+# Hello Vite Template
