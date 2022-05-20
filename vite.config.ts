@@ -1,5 +1,4 @@
-/// <reference types="vitest" />
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
@@ -10,8 +9,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'packages/ui/main.ts'),
-      name: 'lumin-ui',
-      fileName: format => `lumin-ui.${format}.js`,
+      name: 'vite-template',
+      fileName: format => `vite-template.${format}.js`,
     },
 
     rollupOptions: {
