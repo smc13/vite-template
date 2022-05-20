@@ -6,6 +6,12 @@ import path from 'path'
 export default defineConfig({
   plugins: [vue()],
 
+  resolve: {
+    alias: {
+      'vite-template': path.resolve(__dirname, './packages/ui'),
+    },
+  },
+
   build: {
     lib: {
       entry: path.resolve(__dirname, 'packages/ui/main.ts'),

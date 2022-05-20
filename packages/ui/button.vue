@@ -2,33 +2,16 @@
   import { computed } from 'vue'
 
   const props = defineProps({
-    to: { type: String, required: false },
-    type: { type: String, default: 'button' },
     label: { type: String, required: false },
     disabled: { type: Boolean, default: false },
+    to: { type: String, required: false },
   })
 
-  const attrs = computed(() => {
-    const attrs = {
-      type: props.type,
-      disabled: props.disabled,
-      to: props.to,
-      onClick: undefined,
-    }
-
-    if (!props.to && !props.disabled) {
-      attrs.onClick = clicked
-    }
-
-    return attrs
-  })
-
-  const comp = computed(() => (props.to ? 'RouterLink' : 'button'))
-
-  const emit = defineEmits(['clicked'])
-  const clicked = () => emit('clicked')
+  const comp = computed(() => (props.to ? 'a' : 'button'))
 </script>
 
 <template>
-  <component :is="comp" v-bind="attrs">{{ label }}</component>
+  <component :is="comp" :disabled="disabled">
+    <slot>{{ label }}</slot>
+  </component>
 </template>
