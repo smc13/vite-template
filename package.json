@@ -10,7 +10,7 @@
     "coverage": "vitest run --coverage",
     "lint-check": "prettier --check .",
     "lint-fix": "prettier --write .",
-    "docs:dev": "vitepress dev packages/docs",
+    "docs:dev": "vitepress dev packages/docs --port=3003",
     "docs:build": "vitepress build packages/docs",
     "docs:serve": "vitepress serve packages/docs",
     "histoire:dev": "histoire dev --port=3005",
